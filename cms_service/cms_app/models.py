@@ -1,12 +1,14 @@
 from django.db import models
+from django.contrib.auth import get_user_model
 
-# Create your models here.
-from django.db import models
+
 
 class User(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=100)
+
+User = get_user_model()
    
 
 class Post(models.Model):
