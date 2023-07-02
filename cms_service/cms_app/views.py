@@ -5,7 +5,7 @@ from .models import User, Post, Like
 from .serializers import UserSerializer, PostSerializer, LikeSerializer
 from rest_framework.exceptions import PermissionDenied
 
-
+"""creating app"""
 class CreateUserAPIView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
